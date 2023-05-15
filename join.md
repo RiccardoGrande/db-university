@@ -1,8 +1,9 @@
 1. Selezionare tutti gli studenti iscritti al Corso di Laurea in Economia
-SELECT `students`.`name`, `students`.`surname`, `students`.`degree_id`,`departments`.`name`, `degrees`.`department_id`, `departments`.`name`
-FROM `degrees`
-JOIN `departments` ON `id` = `degrees`.`id` 
-WHERE `degrees`.`name` = 'Corso di Laurea in Economia'
+
+SELECT students.name, students.surname, students.degree_id, degrees.name
+FROM students 
+JOIN degrees ON students.degree_id = degrees.id 
+WHERE degrees.name = 'Corso di Laurea in Economia';'
 
 
 
